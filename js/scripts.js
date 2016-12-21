@@ -4,22 +4,30 @@ $(document).ready(function(){
 	var imageBaseUrl = 'http://image.tmdb.org/t/p/';
 	const nowPlayingUrl = apiBaseUrl + "movie/now_playing?api_key="+apiKey;
 
-	$.getJSON(nowPlayingUrl, function(nowPlayingData){
-		console.log(nowPlayingData);
-		var nowPlayingHTML = '';
-		for(let i=0; i< nowPlayingData.results.length; i++){
-			var poster = imageBaseUrl+'w300'+nowPlayingData.results[i].poster_path
-			console.log(poster);
-			nowPlayingHTML += '<div class="col-sm-3">';
-				nowPlayingHTML += '<img src="' + poster+ '">'
+
+	function getNowPlaying(endPoint){
+		$.getJSON(nowPlayingUrl, function(nowPlayingData){
+			var nowPlayingHTML = '';
+			for(let i=0; i< nowPlayingData.results.length; i++){
+				var poster = imageBaseUrl+'w300'+nowPlayingData.results[i].poster_path
+				console.log(poster);
+				nowPlayingHTML += '<div class="col-xs-3">';
+					nowPlayingHTML += '<img src="' + poster+ '">'
 				nowPlayingHTML += '</div>'; 
 			}
-				$('#movie-grid').html(nowPlayingHTML);
+			$('#movie-grid').html(nowPlayingHTML);
+		});
+	}
+
+	function getGenre(whatGenre){
 		
+	}
+
+	getNowPlaying();
 
 
-
-	})
-
+	$('#nowplaying').click(function(){
+		getNowPlaying();			
+	});
 
 })
