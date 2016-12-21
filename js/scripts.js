@@ -38,116 +38,83 @@ $(document).ready(function(){
 				genreHTML += '</div>'; 
 			}
 			$('#movie-grid').html(genreHTML);
-			$('#small-head').html("Genre: Action");
+			
 		});
-		
-		// console.log(genreHTML);
 	}
-
-// var genre_code = new RegExp(value, 'g');
-// genre.search(genre_code);
-
-	// var gmyGenres = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "Thriller", "War", "Western", "Now Playing"];
-	// var genreID = [];
-	// function getGenre(whatGenre){
-	// 	for(var i=0; i < myGenres.length; i++){
-	// 		for(var j =0; j<genres.length; j++){
-	// 			if(myGenres[i] == genres[j].name){
-	// 				genreID.push(genres[j].id);
-	// 			}
-	// 		}
-	// 	}
-	// }
-	//loop though genres.names. if user clicks on drop-down menu item with html == genres.name
-
-
-// var genres=[
-//     {
-//       "id": 28,
-//       "name": "Action"
-//     },
-//     {
-//       "id": 12,
-//       "name": "Adventure"
-//     },
-//     {
-//       "id": 16,
-//       "name": "Animation"
-//     },
-//     {
-//       "id": 35,
-//       "name": "Comedy"
-//     },
-//     {
-//       "id": 80,
-//       "name": "Crime"
-//     },
-//     {
-//       "id": 99,
-//       "name": "Documentary"
-//     },
-//     {
-//       "id": 18,
-//       "name": "Drama"
-//     },
-//     {
-//       "id": 10751,
-//       "name": "Family"
-//     },
-//     {
-//       "id": 14,
-//       "name": "Fantasy"
-//     },
-//     {
-//       "id": 36,
-//       "name": "History"
-//     },
-//     {
-//       "id": 27,
-//       "name": "Horror"
-//     },
-//     {
-//       "id": 10402,
-//       "name": "Music"
-//     },
-//     {
-//       "id": 9648,
-//       "name": "Mystery"
-//     },
-//     {
-//       "id": 10749,
-//       "name": "Romance"
-//     },
-//     {
-//       "id": 878,
-//       "name": "Science Fiction"
-//     },
-//     {
-//       "id": 10770,
-//       "name": "TV Movie"
-//     },
-//     {
-//       "id": 53,
-//       "name": "Thriller"
-//     },
-//     {
-//       "id": 10752,
-//       "name": "War"
-//     },
-//     {
-//       "id": 37,
-//       "name": "Western"
-//     }
-//   ]
-
 	getNowPlaying();
-
-
 	$('#nowplaying').click(function(){
 		getNowPlaying();			
 	})
 	$('#28').click(function(){
 		getByGenre(28);
+		$('#small-head').html("Genre: Action");
 	})
-
+	$('#12').click(function(){
+		getByGenre(12);
+		$('#small-head').html("Genre: Adventure");
+	})
+	$('#16').click(function(){
+		getByGenre(16);
+		$('#small-head').html("Genre: Animation");
+	})
+	$('#35').click(function(){
+		getByGenre(35);
+		$('#small-head').html("Genre: Comedy");
+	})
+	$('#80').click(function(){
+		getByGenre(80);
+		$('#small-head').html("Genre: Crime");
+	})
+	$('#99').click(function(){
+		getByGenre(99);
+		$('#small-head').html("Genre: Documentary");
+	})
+	$('#18').click(function(){
+		getByGenre(18);
+		$('#small-head').html("Genre: Drama");
+	})
+	$('#10751').click(function(){
+		getByGenre(10751);
+		$('#small-head').html("Genre: Family");
+	})
+	$('#14').click(function(){
+		getByGenre(14);
+		$('#small-head').html("Genre: Fantasy");
+	})
+	$('#36').click(function(){
+		getByGenre(36);
+		$('#small-head').html("Genre: History");
+	})
+	$('#27').click(function(){
+		getByGenre(27);
+		$('#small-head').html("Genre: Horror");
+	})
+	$('#10402').click(function(){
+		getByGenre(10402);
+		$('#small-head').html("Genre: Music");
+	})
+	$('#9648').click(function(){
+		getByGenre(9648);
+		$('#small-head').html("Genre: Mystery");
+	})
+	$('#10749').click(function(){
+		getByGenre(10749);
+		$('#small-head').html("Genre: Romance");
+	})
+	$('#878').click(function(){
+		getByGenre(878);
+		$('#small-head').html("Genre: Science Fiction");
+	})
+	$('#53').click(function(){
+		getByGenre(53);
+		$('#small-head').html("Genre: Thriller");
+	})
+	$('#10751').click(function(){
+		getByGenre(10751);
+		$('#small-head').html("Genre: War");
+	})
+	$('#37').click(function(){
+		getByGenre(37);
+		$('#small-head').html("Genre: Western");
+	})
 });
