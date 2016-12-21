@@ -10,18 +10,23 @@ $(document).ready(function(){
 	function getNowPlaying(endPoint){
 		$.getJSON(nowPlayingUrl, function(nowPlayingData){
 			var nowPlayingHTML = '';
-			console.log(nowPlayingData);
+			// console.log(nowPlayingData);
 			for(let i=0; i< nowPlayingData.results.length; i++){
 				var poster = imageBaseUrl+'w300'+nowPlayingData.results[i].poster_path
-				// console.log(poster);
+				console.log(nowPlayingData);
 				nowPlayingHTML += '<div class="col-xs-3">';
-					nowPlayingHTML += '<img src="' + poster+ '">';
-				nowPlayingHTML += '</div>'; 
+					nowPlayingHTML +='<div class="hovereffect">';
+						nowPlayingHTML += '<img class="img-responsive" img src="' + poster+ '" alt="">';
+							nowPlayingHTML += '<div class="overlay">';
+								nowPlayingHTML += '<h2>'+nowPlayingData.results[i].title+'</h2>';
+								nowPlayingHTML += '<a class="info" href="#">'+nowPlayingData.results[i].overview+'</a>';
+							nowPlayingHTML += '</div>'; 
+						nowPlayingHTML += '</div>'; 
+				nowPlayingHTML += '</div>';
 			}
 			$('#movie-grid').html(nowPlayingHTML);
 		});
 	}
-
 
 	function getByGenre(genreID){
 		const genreIDUrl = "https://api.themoviedb.org/3/genre/" + genreID + "/movies?api_key=" +apiKey + "&language=en-US&include_adult=false&sort_by=created_at.asc";
