@@ -19,8 +19,13 @@ $(document).ready(function(){
 		});
 	}
 
+
+
+	var genres = ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "Thriller", "War", "Western", "Now Playing"];
 	function getGenre(whatGenre){
-		
+		for(var i=0; i < genres.length; i++){
+
+		}
 	}
 
 	getNowPlaying();
@@ -29,5 +34,4 @@ $(document).ready(function(){
 	$('#nowplaying').click(function(){
 		getNowPlaying();			
 	});
-
-})
+});

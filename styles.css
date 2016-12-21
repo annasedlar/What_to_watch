@@ -8,7 +8,8 @@ img{
 	border: 1px solid black;
 }
 
-#head{
+.jumbotron{
+	background-color: #660000;
 	font-size: 50px;
 	color: white;
 	background-color: #660000;
