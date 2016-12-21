@@ -39,7 +39,13 @@ $(document).ready(function(){
 			for(let i=0; i < genreData.results.length; i++){
 				var genrePoster = imageBaseUrl + 'w300' + genreData.results[i].poster_path;
 				genreHTML += '<div class="col-xs-3">';
-					genreHTML += '<img src="' + genrePoster+ '">';
+					genreHTML +='<div class="hovereffect">';
+						genreHTML += '<img class="img-responsive" img src="' + genrePoster+ '" alt="">';
+						genreHTML += '<div class="overlay">';
+							genreHTML += '<h2>'+genreData.results[i].title+'</h2>';
+							genreHTML += '<a class="info" href="#">'+genreData.results[i].overview+'</a>';
+						genreHTML += '</div>'; 
+					genreHTML += '</div>'; 
 				genreHTML += '</div>'; 
 			}
 			$('#movie-grid').html(genreHTML);
