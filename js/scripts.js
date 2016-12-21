@@ -14,7 +14,7 @@ $(document).ready(function(){
 			for(let i=0; i< nowPlayingData.results.length; i++){
 				var poster = imageBaseUrl+'w300'+nowPlayingData.results[i].poster_path
 				console.log(nowPlayingData);
-				nowPlayingHTML += '<div class="col-xs-3 fancybox" rel="group">';
+				nowPlayingHTML += '<div class="col-xs-3">';
 					nowPlayingHTML +='<div class="hovereffect">';
 						nowPlayingHTML += '<img class="img-responsive" img src="' + poster+ '" alt="">';
 							nowPlayingHTML += '<div class="overlay">';
@@ -38,9 +38,9 @@ $(document).ready(function(){
 
 			for(let i=0; i < genreData.results.length; i++){
 				var genrePoster = imageBaseUrl + 'w300' + genreData.results[i].poster_path;
-				genreHTML += '<div class="col-xs-3 fancybox" rel="group">';
+				genreHTML += '<div class="col-xs-3">';
 					genreHTML +='<div class="hovereffect">';
-						genreHTML += '<img class="img-responsive" img src="' + genrePoster+ '" alt="">';
+						genreHTML += '<img class="img-responsive" img src="'+genrePoster+'" alt="">';
 						genreHTML += '<div class="overlay">';
 							genreHTML += '<h2>'+genreData.results[i].title+'</h2>';
 							genreHTML += '<a class="info" href="#">'+genreData.results[i].overview+'</a>';
@@ -53,8 +53,6 @@ $(document).ready(function(){
 		});
 	}
 	getNowPlaying();
-
-	$(".fancybox").fancybox();
 
 	$('#nowplaying').click(function(){
 		getNowPlaying();			
