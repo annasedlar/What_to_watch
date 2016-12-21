@@ -16,7 +16,8 @@ img{
 }
 
 .small-head{
-	text-align: center;
+	text-align: left;
+	font-size: 40px;
 }
 
 .row{
@@ -27,5 +28,8 @@ img{
 	font-size: 30px;
 	color: maroon;
 	text-shadow: 1px 1px black;
+}
 
+#searchbar{
+	width: 325px;
 }
