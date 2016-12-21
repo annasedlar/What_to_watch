@@ -2,8 +2,20 @@ body{
 	background-color: #660000;
 }
 
+img{
+	max-width: 100%;
+	margin: 10px;
+	border: 1px solid black;
+}
+
 #head{
 	font-size: 50px;
+	color: white;
+	background-color: #660000;
+}
+
+.small-head{
+	text-align: center;
 }
 
 .row{
