@@ -1,3 +1,18 @@
 body{
-	background-color: lightyellow;
+	background-color: #660000;
+}
+
+#head{
+	font-size: 50px;
+}
+
+.row{
+	text-align: center;
+	background-color: white;
+	padding: 30px;
+	margin: 10px;
+	font-size: 30px;
+	color: maroon;
+	text-shadow: 1px 1px black;
+
 }
