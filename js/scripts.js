@@ -25,6 +25,7 @@ $(document).ready(function(){
 				nowPlayingHTML += '</div>';
 			}
 			$('#movie-grid').html(nowPlayingHTML);
+
 		});
 	}
 
@@ -55,7 +56,8 @@ $(document).ready(function(){
 	getNowPlaying();
 
 	$('#nowplaying').click(function(){
-		getNowPlaying();			
+		getNowPlaying();	
+		$('#small-head').html("Now Playing");		
 	})
 	$('#28').click(function(){
 		getByGenre(28);
