@@ -1,5 +1,6 @@
 body{
-	background-color: #660000;
+	background-color: #550000;
+	background: linear-gradient(#550000, #000);
 }
 
 img{
@@ -8,11 +9,15 @@ img{
 	border: 1px solid black;
 }
 
+/* .navbar{
+	position: fixed;
+}
+ */
 .jumbotron{
-	background-color: #660000;
+	background-color: rgba(85, 0, 0, 0);
 	font-size: 50px;
 	color: white;
-	background-color: #660000;
+
 }
 
 .small-head{
