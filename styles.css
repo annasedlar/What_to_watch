@@ -16,7 +16,7 @@ img{
 .jumbotron{
 	background-color: rgba(85, 0, 0, 0);
 	font-size: 50px;
-	color: white;
+	color: #eee5e5;
 
 }
 
@@ -27,7 +27,7 @@ img{
 
 .row{
 	text-align: center;
-	background-color: white;
+	background-color: #eee5e5;
 	padding: 20px;
 	margin: 10px;
 	font-size: 30px;
